@@ -7,11 +7,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import ru.example.nemchinovr.dao.AccountRepository;
+import ru.example.nemchinovr.dao.CustomRepository;
+
 //@ComponentScan("ru.example.nemchinovr")
 @SpringBootApplication(scanBasePackages = { "ru.example.nemchinovr" })
 public class SpringBootExampleApplication implements CommandLineRunner {
     @Autowired
-    AccountRepository accountRepository;
+    private CustomRepository customRepository;
 
     public static void main(String[] args) {
         SpringApplication.run(SpringBootExampleApplication.class, args);
@@ -19,7 +21,7 @@ public class SpringBootExampleApplication implements CommandLineRunner {
 
     @Override
     public void run(String... strings) throws Exception {
-        System.out.println("hello");
+        System.out.println("hello - ---" + customRepository.countAccounts());
 //        accountRepository.findAll().forEach(System.out::println);
     }
 }
