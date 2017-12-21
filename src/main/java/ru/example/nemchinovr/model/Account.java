@@ -78,4 +78,11 @@ public class Account {
                 ", lastName='" + lastName + '\'' +
                 '}';
     }
+//    https://github.com/Nemchinovrp/spring-boot-learning.git
 }
+/*
+Туториал цупис
+https://partner-wiki.1cupis.ru/display/DOC/Payment+API#PaymentAPI-1.Общиетипыданных
+
+        логин: partner
+        пароль: nemjewyavKub*/
